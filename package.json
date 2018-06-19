@@ -1,0 +1,32 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Vera Tejic CV",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --watch",
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vera Tejic <veratejic6@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "consolidate": "^0.15.0",
+    "express": "^4.16.2",
+    "handlebars": "^4.0.11",
+    "jquery": "^3.3.1",
+    "nodemon": "^1.17.1",
+    "swiper": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "css-loader": "^0.28.11",
+    "enquire.js": "^2.1.6",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.8.3",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  }
+}

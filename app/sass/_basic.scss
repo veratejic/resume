@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+
+  @media (min-width: 768px) {
+    overflow: hidden;
+  }
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  // background: red;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    height: 100vh;
+    z-index: 1;
+  }
+}
+
+.item1 {
+  padding-top: 100px;
+
+  @media (min-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.item2 {
+  background-color: #000;
+  position: relative;
+  order: -3;
+  height: 50%;
+  overflow: visible;
+  padding: $page-padding;
+
+  @media (min-width: 768px) {
+    order: initial;
+    height: auto;
+  }
+
+
+  .image-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    @media (min-width: 768px) {
+      height: 93%;
+    }
+  }
+
+  .inner-image {
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/vera.jpg");
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+  .contacthead {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 60px;
+      padding-bottom: 40px;
+      color: #fff;
+    }
+  }
+}
+
+
+.footer {
+  width: 100%;
+  position: relative;
+  bottom:  60px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+
+    span {
+      display: none;
+    }
+
+    a {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      width: 55%;
+      position: relative;
+      bottom:  60px;
+      display: flex;
+      justify-content: flex-end;
+      z-index: 2;
+
+        span {
+          display: block;
+          position: absolute;
+          right: 35px;
+          color: #7a7a7a;
+          font-size: 12px;
+        }
+
+        a {
+          display: block;
+          position: absolute;
+          right: 35px;
+          color: #7a7a7a;
+          font-size: 12px;
+          text-decoration: none;
+        }
+    }
+}
+
+// states
+
+.item2 {
+  .inner-image {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .contacthead {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+}
+
+.footer {
+
+  span {
+    opacity: 0;
+
+    @media (min-width: 768px) {
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+  }
+
+  a {
+    opacity: 1;
+
+    @media (min-width: 768px) {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+  }
+}
+
+///
+
+body.contact-slide {
+
+  .item2 {
+    .inner-image {
+      opacity: 1;
+    }
+
+@media (min-width: 768px) {
+    .inner-image {
+      opacity: 0;
+    }
+}
+    .contacthead {
+        opacity: 1;
+    }
+  }
+
+  .footer {
+
+    span {
+      opacity: 0;
+    }
+
+    a {
+      opacity: 1;
+    }
+  }
+}

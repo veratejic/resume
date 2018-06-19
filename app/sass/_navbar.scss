@@ -1,0 +1,39 @@
+.navbar {
+  width: 100%;
+  height: auto;
+  padding-left: $page-padding;
+  padding-right: $page-padding;
+  position: absolute;
+  top: 50%;
+
+  @media (min-width: 768px) {
+    width: 55%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+  }
+
+  .name {
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    padding-top: 20px;
+
+    &:hover {
+      color: #7a7a7a;
+    }
+
+    @media (min-width: 768px) {
+
+    }
+  }
+}
